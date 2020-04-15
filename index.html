@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- enlazar jquery por CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>Pelayo Figaredo - Practica I</title>
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+			  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+              crossorigin="anonymous">
+        <!-- Estilos propios -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <!-- JS propios -->
+        <script type="text/javascript" src="js/pong.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Girassol">
+    </head>
+    <body>
+        <div class="row justify-content-center"> 
+            <div class="col-md 4">
+                <div class="align-items-center" >
+                 <h1>Pong de Pelayo</h1>
+                </div>
+            </div>
+        </div>
+        <section id="gameSection">
+            <div class="row justify-content-center"> 
+                <div class="col-lg align-self-center">
+                    <canvas id="gameCanvas" width="800" height="400"></canvas>
+                </div>
+                <div class="col-sm align-self-center">
+                    <div class="d-flex justify-content-center">
+                        <div><p>Puntuación:</p></div>
+                        <div class="d-flex justify-content-center" id="fhor">
+                            <div><p id="scorep1">Jugador 1: 0</p></div>
+                            <div><p id="scorep2">Jugador 2: 0</p></div>
+                        </div>
+                        <div><p>Tiempo restante:</p></div>
+                        <div><p id="time">180</p></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div><button type="submit" id="startGame" class="btn btn-primary">Comenzar Partida</button></div>
+                        <div><button type="submit" id="pause" class="btn btn-primary">Pausar</button></div>
+                        <div><button type="submit" id="config" class="btn btn-primary">Configuración</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="configSection">
+        <div class="row justify-content-center"> 
+            <div class="col align-self-center">
+                <div class="d-flex justify-content-center">
+                    <label for="player1name">Nombre Jugador 1: </label>
+                    <input type="text" id="player1name" name="player1name" value="Jugador 1">
+                    <label for="player1Color">Color Jugador 1: </label>
+                    <input type="color" id="player1Color" name="player1Color" value="#ff6600">
+                </div>
+            </div>
+            <div class="col align-self-center">
+                <div class="d-flex justify-content-center">
+                    <label for="player2name">Nombre Jugador 2: </label>
+                    <input type="text" id="player2name" name="player2name" value="Jugador 2">
+                    <label for="player2Color">Color Jugador 2: </label>
+                    <input type="color" id="player2Color" name="player2Color" value="#cc00cc">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center"> 
+            <div class="col-sm ">     
+                <div class="align-items-center" >
+                    <div class="d-flex justify-content-center">
+                        <label for="ballColor">Color pelota: </label>
+                        <input type="color" id="ballColor" name="ballColor" value="#00ff00">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+        
+    </body>
+</html>
