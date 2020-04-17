@@ -309,9 +309,11 @@ function keyPressed(event) {
     // Flechas de direccion (Jugador 2)
     if (event.keyCode == 38) {//flecha superior
         keysPressed['38'] = true;
+        event.preventDefault();//Desactivamos el scroll vertical de la pagina
     }
     if (event.keyCode == 40 ) {//flecha inferior
         keysPressed['40'] = true;
+        event.preventDefault();//Desactivamos el scroll vertical de la pagina
     }
     // W y S (Jugador 1)
     if (event.keyCode == 87) {//w
@@ -319,6 +321,9 @@ function keyPressed(event) {
     }
     if (event.keyCode == 83 ) {//s
         keysPressed['83'] = true;
+    }
+    if(event.keyCode == 37 || event.keyCode == 39){
+        event.preventDefault();//Desactivamos tambien el lateral
     }
 }
 /** DETECTAR TECLAS LEVANTADAS **/
